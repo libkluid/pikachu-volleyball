@@ -1,0 +1,43 @@
+#pragma code_page(65001)
+#include <windows.h>
+
+// ---------------------------------------------------------------------------
+//  Resource script: bitmaps, icon, waves and the menu.
+// ---------------------------------------------------------------------------
+
+#include "assets.rc"
+
+4 MENU
+BEGIN
+    POPUP "게임(&G)"
+    BEGIN
+        MENUITEM "게임 중지(&P)",       40013
+        MENUITEM "게임 리셋(&R)",       40003
+        MENUITEM SEPARATOR
+        MENUITEM "게임 종료(&Q)",       40001
+    END
+    POPUP "설정(&C)"
+    BEGIN
+        POPUP "게임 속도(&S)"
+        BEGIN
+            MENUITEM "느리게(&L)",      40004
+            MENUITEM "보통(&M)",        40005
+            MENUITEM "빠르게(&H)",      40006
+        END
+        POPUP "게임 점수(&P)"
+        BEGIN
+            MENUITEM "5포인트(&A)",     40009
+            MENUITEM "10포인트(&B)",    40010
+            MENUITEM "15포인트(&C)",    40011
+        END
+    END
+    POPUP "윈도우(&W)"
+    BEGIN
+        MENUITEM "게임 창을 원래 자리로(&W)", 40012
+    END
+    POPUP "도움(&H)"
+    BEGIN
+        MENUITEM "게임 정보(&A)",       40002
+    END
+    MENUITEM "디버그(&D)",              40007
+END
